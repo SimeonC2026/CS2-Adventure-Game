@@ -7,16 +7,19 @@ import java.util.Scanner;
        String command = ""; // stores the user's choices
       
        // STEP #1: Describe the current scenario
-       System.out.println("You are at the Columbus Circle entrance to Central Park.");
+       System.out.println("You are at the Rockefeller Center.");
        // STEP #2: Get user command 
-       command = getCommand("Do you go east (e) or south (s)?");
+       command = getCommand("Do you go East(e) or North (n)?");
        // STEP #3: Select a path based on the user's command
        if (  command.equals("e") ) {
          // NEXT BRANCH...
-         System.out.println("You reach the Carousel.");
+         System.out.println("You reach St. Patrick's Cathedral.");
+         command = getCommand("Want to walk around the cathedral or sit? (walk around/sit)");
+         if ( command.equals("walk around") )
+          System.out.println("Those stained glass windows are so beautiful! You can take a photo of it.");
        }
-       else if ( command.equals("s") ) {
-         System.out.println("You see a wedding at the lake with the sailboats");
+       else if (command.equals("n") ) {
+         System.out.println("You see the Apple Store and go there.");
        }
        else {
          System.out.println("GAME OVER! You got lost in the Time Warner center shopping for hours. Press RUN to replay.");
@@ -37,7 +40,6 @@ import java.util.Scanner;
        System.out.println("\n▶︎▶︎▶︎ " + prompt);
        Scanner scan = new Scanner(System.in);
        String command = scan.nextLine().toLowerCase();
-       scan.close();
        return command;
     } // END OF METHOD
  } // END OF CLASS
