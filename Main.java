@@ -20,10 +20,19 @@ import java.util.Scanner;
        }
        else if (command.equals("n") ) {
          System.out.println("You see the Apple Store and go there.");
-       }
+         command = getCommand("Do you want to see all of the electronic devices made by Apple? (y/n)");
+         if ( command.equals("y") ) {
+          System.out.println("Wow! All of the devices look very cool! They have so many interactive features and they are very fun!");
+         }
+         command = getCommand("Want to have dinner with me at Chipotle? (y/n)");
+         if ( command.equals("y") ) {
+          System.out.println("You walk along 5th Avenue to Chipotle to have dinner.");
+          System.out.println("This food is great!");
+         }
        else {
          System.out.println("GAME OVER! You got lost in the Time Warner center shopping for hours. Press RUN to replay.");
        }
+      }
 
 
     
